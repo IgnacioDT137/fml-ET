@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FML ET</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row mw-100">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card title">Ingrese los datos para realizar una predicción</h2>
+                    <form action="/prediccion" method="post" id="formulario">
+
+                        <div class="form-group">
+                            <label for="mapaInput">Mapa</label>
+                            <select name="map" id="mapaInput" class="form-control">
+                                <option value="1">de_inferno</option>
+                                <option value="2">de_dust</option>
+                                <option value="3">de_mirage</option>
+                                <option value="4">de_nuke</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="GLinput">Granadas letales</label>
+                            <input type="number" id="GLinput" name="gl" class="form-control" required min="0">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="GNLinput">Granadas no letales</label>
+                            <input type="number" id="GNLinput" name="gnl" class="form-control" required min="0">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="killsInput">Asesinatos en la ronda</label>
+                            <input type="number" id="killsInput" name="kills" class="form-control" required min="0" max="5">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="assistsInput">Asistencias en la ronda</label>
+                            <input type="number" id="assistsInput" name="assists" class="form-control" required min="0" max="5">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="aceSelect">Ace</label>
+                            <select name="ace" id="aceSelect" class="form-control">
+                                <option value="1">Si</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="mvpSelect">MVP</label>
+                            <select name="mvp" id="mvpSelect" class="form-control">
+                                <option value="1">Si</option>
+                                <option value="0">No</option>
+                            </select> 
+                        </div>
+                        
+                    
+                        <div class="form-group"> 
+                            <label for="phsInput">Porcentaje de headshots</label>
+                            <input type="number" id="phsInput" name="phs" class="form-control" required min="0" max="100">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="">Porcentaje de flankills</label>
+                            <input type="number" min="0" max="100" id="pfkInput" name="pfk" class="form-control" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="dineroInput">Dinero invertido al inicio de la ronda</label>
+                            <input type="number" id="dineroInput" name="dinero" class="form-control" required min="0">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="pdineroInput">Porcentaje de dinero aportado al equipo</label>
+                            <input type="number" min="0" max="100" id="pdineroInput" name="pdinero" class="form-control" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Predecir</button>
+                        <button type="reset" class="btn btn-danger">Limpiar</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
